@@ -1,0 +1,109 @@
+html{
+	color:#000;
+	background:#fff;
+    overflow-x: hidden;
+	overflow-y: auto;
+	/*文本大小根据设备尺寸进行调整，取值auto自动、none不调整、percentage百分比*/
+	-webkit-text-size-adjust:100%;/*用百分比来指定文本大小在设备尺寸不同的情况下如何调整*/
+	-ms-text-size-adjust:100%;
+	/*快速滚动和回弹的效果，允许独立的滚动区域和触摸回弹，WebKit私有属性*/
+	-webkit-overflow-scrolling: touch;
+}
+html *{
+	outline:0;
+	-webkit-text-size-adjust:none;
+	/*
+		当用户轻按一个链接或者JavaScript可点击元素时给元素覆盖一个高亮色。
+		如果想取消这个高亮，将值设置为全透明即可，比如transparent
+	 */
+	-webkit-tap-highlight-color:transparent;
+}
+body,html{
+	font-family:"Microsoft YaHei",sans-serif,Tahoma,Arial;
+}
+article,aside,blockquote,body,button,code,dd,details,div,dl,
+dt,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,
+hgroup,hr,input,legend,li,menu,nav,ol,p,pre,section,td,textarea,th,ul{
+	margin:0;
+	padding:0;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box
+}
+
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{
+	display:block
+}
+input,input[type=button],input[type=reset],input[type=submit]{
+	resize:none;
+	border:none;
+	/* 
+		appearance允许使元素看上去像标准的用户界面元素
+		appearance: normal常规元素|icon图标（小图片）|window视口|button按钮|menu呈现为一套供用户选择的选项|field呈现为输入字段; 
+	*/
+	/*
+		border-radius兼容iPhone的时候会出现和安卓不一样的效果，小圆角变成半圆角
+		这个时候只需要给该元素添加css ，-webkit-appearance:none;即可解决兼容问题
+ 	*/
+	-webkit-appearance:none;/*解决iPhone圆角问题*/
+	border-radius:0;/*解决iPhone圆角问题*/
+}
+input,select,textarea{
+	/* 
+		有的元素不会继承根元素字体大小，所以在移动端开发时常设置如下情况
+		重设浏览器默认字体大小h1,h2,h3,h4,h5,h6 {font-size:100%;font-weight:normal;}
+		因为假如你设置body{font-size:12px;}，但h1是不会继承这个12px，它会按照一定百分比增加字号，
+		但如果给h1显示指定font-size:100%;它就会继承body设定的字体大小，所以它改变了默认的大小
+	*/
+	/* font-size在IE7-设置px不具有继承性，设置%是为了把 font-size 设置为基于父元素的一个百分比值 */
+	font-size:100%
+}
+table{
+	/*表格设置合并边框*/
+	border-collapse:collapse;
+	/*单元格间隙合并*/
+	border-spacing:0
+}
+fieldset,img{
+	border:0
+}
+
+ol,ul{
+	list-style:none;
+}
+caption,th{
+	text-align:left;
+}
+h1,h2,h3,h4,h5,h6{
+	font-size:100%;
+	font-weight:500;
+}
+sub,sup{
+	font-size:75%;
+	line-height:0;
+	position:relative;
+	vertical-align:baseline;
+}
+sup{
+	top:-.5em;
+}
+sub{
+	bottom:-.25em;
+}
+
+a:hover{
+	text-decoration:underline;
+}
+a,ins{
+	text-decoration:none;
+}
+a:active,a:hover,a:link,a:visited{
+	background:0 0;
+	-webkit-tap-highlight-color:transparent;
+	/*这个属性只用于iOS (iPhone和iPad)。当你点击一个链接或者通过Javascript定义的可点击元素的时候，
+	它就会出现一个半透明的灰色背景。要重设这个表现，你可以设置-webkit-tap-highlight-color为任何颜色。
+	想要禁用这个高亮，设置颜色的alpha值为0即可。*/
+	-webkit-tap-highlight-color:transparent;
+	outline:0;
+	text-decoration:none;
+}

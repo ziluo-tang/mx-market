@@ -1,0 +1,44 @@
+{
+  "id": "1470146",
+  "name": "漫享购",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1898820",
+      "name": "home",
+      "font_class": "home",
+      "unicode": "e6b7",
+      "unicode_decimal": 59063
+    },
+    {
+      "icon_id": "3977271",
+      "name": "我的",
+      "font_class": "weibiaoti-_huabanfuben",
+      "unicode": "e61a",
+      "unicode_decimal": 58906
+    },
+    {
+      "icon_id": "6804103",
+      "name": "Chat-Buble 3",
+      "font_class": "Chat-Buble",
+      "unicode": "e866",
+      "unicode_decimal": 59494
+    },
+    {
+      "icon_id": "8019596",
+      "name": "分类",
+      "font_class": "fenlei",
+      "unicode": "e612",
+      "unicode_decimal": 58898
+    },
+    {
+      "icon_id": "11177627",
+      "name": "购物车",
+      "font_class": "ziyuan",
+      "unicode": "e60e",
+      "unicode_decimal": 58894
+    }
+  ]
+}
